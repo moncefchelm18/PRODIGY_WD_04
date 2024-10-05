@@ -1,0 +1,106 @@
+:root {
+  --bg-color: #f0f8f7;
+  --second-bg-color: #27ae5f34;
+  --text-color: #383838;
+  --main-color: #27ae60;
+}
+
+.contact {
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6rem;
+  align-items: center;
+}
+
+.contact .heading {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contact form {
+  width: 60%;
+}
+
+.contact span {
+  color: var(--main-color);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-container .input-field {
+  position: relative;
+  background: transparent;
+}
+.input-field {
+  position: relative;
+  background: transparent;
+  z-index: 1; /* Set a higher z-index value */
+}
+.input-field input,
+.input-field textarea {
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+  padding: 15px;
+  background: transparent;
+  width: 100%;
+  resize: none;
+  z-index: 2;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--second-bg-color);
+  border-radius: 5px;
+  z-index: -1;
+  transition: 0.5s;
+}
+.input-field input:focus ~ .focus,
+.input-field textarea:focus ~ .focus {
+  width: 100%;
+}
+.contact-infos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-message textarea {
+  width: 100%;
+}
+
+.contact .btn-box {
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-infos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact form {
+    width: 90%;
+  }
+}
