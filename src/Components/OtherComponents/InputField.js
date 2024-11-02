@@ -7,11 +7,14 @@ const InputField = (props) => {
         name={props.name}
         id={props.name}
         placeholder={props.placeholder}
-        cols="30"
-        rows="10"
+        cols={props.textarea ? "30" : undefined}
+        rows={props.textarea ? "10" : undefined}
+        onChange={props.onChange}
+        value={props.value}
       />
       <span className="focus"></span>
     </div>
   );
 };
+
 export default InputField;

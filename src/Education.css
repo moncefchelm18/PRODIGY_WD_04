@@ -37,6 +37,7 @@
   margin-bottom: 15px;
 }
 .infos {
+  height: 100%;
   border: 2px solid var(--main-color);
   padding: 15px;
   border-radius: 5px;

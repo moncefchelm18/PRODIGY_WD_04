@@ -4,8 +4,8 @@ import SectionWithFade from "./OtherComponents/SectionWithFade";
 
 const About = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Set this to true if you want the animation to trigger only once
-    threshold: 0, // Adjust this threshold as needed
+    triggerOnce: false, // Définissez ceci sur true si vous voulez que l'animation se déclenche une seule fois
+    threshold: 0, // Ajustez ce seuil si nécessaire
   });
 
   return (
@@ -19,7 +19,7 @@ const About = () => {
           direction={{ center: true }}
         >
           <h2 className={`heading ${inView ? "visible" : ""}`}>
-            About <span>Me</span>
+            À <span>Propos</span>
           </h2>
         </SectionWithFade>
         <SectionWithFade
@@ -30,7 +30,7 @@ const About = () => {
           direction={{ left: true }}
         >
           <div className={`about-img ${inView ? "visible" : ""}`}>
-            <img src="mch.png" alt="doctor" />
+            <img src="mch.png" alt="docteur" />
             <span className="circle-spin"></span>
             <span className={`overlay ${inView ? "visible" : ""}`}></span>
           </div>
@@ -44,12 +44,12 @@ const About = () => {
             distance={"25px"}
             direction={{ right: true }}
           >
-            <h3>Frontend Developer!</h3>
+            <h3>Développeur Web !</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              vero tempore numquam exercitationem iusto accusamus neque
-              explicabo deleniti. Ipsa dignissimos voluptas ut numquam odio
-              soluta praesentium voluptate sit, esse nesciunt?
+              Étudiant en Master 2 en ingénierie logicielle et systèmes
+              intelligents à l'Université Constantine 2, avec une licence <br />
+              en génie logiciel et une expérience en développement web
+              (ReactJS).
             </p>
           </SectionWithFade>
 
@@ -62,7 +62,7 @@ const About = () => {
           >
             <div className={`btn-box btns ${inView ? "visible" : ""}`}>
               <a href="www.google.com" className="btn" style={{ "--i": 1 }}>
-                Read More
+                En savoir plus
               </a>
             </div>
           </SectionWithFade>

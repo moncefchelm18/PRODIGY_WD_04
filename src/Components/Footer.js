@@ -18,7 +18,7 @@ const Footer = () => {
         >
           <div className="footer-text">
             <p>
-              Copyright &copy; 2024 By Chelgham Company | All Rights Reserved
+              Copyright &copy; 2024 Par Chelgham Mounsif | Tous Droits Réservés
             </p>
           </div>
         </SectionWithFade>

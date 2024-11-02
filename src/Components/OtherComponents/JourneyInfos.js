@@ -11,12 +11,7 @@ const JourneyInfos = (props) => {
           </div>
 
           <h3>{props.title}</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            soluta, sapiente eligendi eum, dolor possimus nam ab dicta optio ut,
-            a cupiditate? Dicta soluta iusto fuga? Accusamus, nobis! Magni,
-            impedit.
-          </p>
+          <p>{props.description}</p>
         </div>
       </div>
     </>

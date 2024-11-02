@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { BiLogoInstagram, BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
+import {
+  BiLogoInstagram,
+  BiLogoFacebook,
+  BiLogoTwitter,
+  BiLogoLinkedin,
+  BiLogoGithub,
+} from "react-icons/bi";
 import { useInView } from "react-intersection-observer";
 import SectionWithFade from "./OtherComponents/SectionWithFade";
 
 const NameDisplay = () => {
   const [names, setNames] = useState([
-    "Frontend Developer",
-    "Student",
+    "Développeur Frontend",
+    "Étudiant",
     "Designer",
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,20 +36,12 @@ const NameDisplay = () => {
   );
 };
 const Home = () => {
-  const title = ["Frontend Developer", "Studnet", "Designer"];
+  const title = ["Développeur Frontend", "Étudiant", "Designer"];
   const [ref, inView] = useInView({
-    triggerOnce: false, // Set this to true if you want the animation to trigger only once
-    threshold: 0, // Adjust this threshold as needed
+    triggerOnce: false, // Définissez ceci sur true si vous voulez que l'animation se déclenche une seule fois
+    threshold: 0, // Ajustez ce seuil si nécessaire
   });
 
-  /* useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prevIndex) =>
-        prevIndex === title.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000);
-    return () => clearInterval(interval);
-  }); */
   return (
     <>
       <section className="home" id="home" ref={ref}>
@@ -56,7 +54,7 @@ const Home = () => {
             direction={{ left: true }}
           >
             <h1>
-              Hi, I'm <span>Chelgham Moncef</span>
+              Salut, je suis <span>Chelgham Moncef</span>
             </h1>
           </SectionWithFade>
 
@@ -81,10 +79,10 @@ const Home = () => {
             direction={{ left: true }}
           >
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
-              mauris non mi aliquet vehicula. Fusce non libero ut nisl mollis
-              eleifend. Suspendisse potenti. Pellentesque habitant morbi
-              tristique senectus.
+              En tant que développeur frontend, je crée des interfaces modernes
+              et réactives avec ReactJS. Mon objectif est de fournir des
+              expériences utilisateur fluides et optimisées, adaptées aux
+              besoins des utilisateurs.
             </p>
           </SectionWithFade>
           <SectionWithFade
@@ -96,10 +94,10 @@ const Home = () => {
           >
             <div className="btn-box">
               <a href="#hireme" className="btn">
-                Hire Me!
+                Mon CV
               </a>
               <a href="#contact" className="btn">
-                Let's Talk
+                Discutons
               </a>
             </div>
           </SectionWithFade>
@@ -112,13 +110,16 @@ const Home = () => {
           >
             <div className="home-sci">
               <a href="#contact" className="btn">
+                <BiLogoLinkedin size={20} color={"#27AE60"} />
+              </a>
+              <a href="#contact" className="btn">
+                <BiLogoGithub size={20} color={"#27AE60"} />
+              </a>
+              <a href="#contact" className="btn">
                 <BiLogoInstagram size={20} color={"#27AE60"} />
               </a>
               <a href="#contact" className="btn">
                 <BiLogoFacebook size={20} color={"#27AE60"} />
-              </a>
-              <a href="#contact" className="btn">
-                <BiLogoTwitter size={20} color={"#27AE60"} />
               </a>
             </div>
           </SectionWithFade>
@@ -131,7 +132,7 @@ const Home = () => {
           direction={{ right: true }}
         >
           <div className="home-img">
-            <img src="mch.png" alt="doctor" />
+            <img src="mch.png" alt="docteur" />
           </div>
         </SectionWithFade>
       </section>
